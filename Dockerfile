@@ -16,7 +16,7 @@ RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN apk -Uuv add groff less gcc python3 python3-dev py3-pip libffi-dev musl-dev openssl-dev
 
 RUN pip3 install awscli
-RUN pip3 install awsebcli
+RUN pip3 install awsebcli --ignore-installed six
 RUN apk --purge -v del py-pip
 RUN rm /var/cache/apk/*
 
